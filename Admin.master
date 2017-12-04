@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="master_Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>ADMIN MASTER PAGE</title>
+
+     <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">    
+    </asp:ContentPlaceHolder>
+</head>
+      
+<body>
+     <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+             <div class="navbar-header">
+                 <a class="navbar-brand" href="#">Hostel Permission System</a>
+             </div>
+             <ul class="nav  navbar-nav navbar-right">
+                 <asp:Label ID="Label1" runat="server" Text="Welcome" CssClass="navbar-text"></asp:Label>
+                 <li><a href="#">View Profile</a></li>
+                 <li><a href="#">Logout</a></li>
+                 </ul>             
+         </div>
+     </nav>
+   <br />
+    <br />
+
+    <div class="section" style="border-style:solid; border-width:1px;">
+
+    <div class="container-fluid">
+   <div class="coordinator" style=" margin-left:5%; width:15%; float:left; padding-left:40px;" >
+       <h2>Faculity</h2>
+       <br />
+       <asp:HyperLink ID="HyperLink1" runat="server" Target="_blank" NavigateUrl="~/Admin/Registrations/Faculity_reg.aspx">Register Coordinators</asp:HyperLink>
+       <br />
+       <br />
+       <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/View Data/Coordinators/reg_coord.aspx"> Registered Coordinators</asp:HyperLink>
+       <br />
+       <br />
+      
+       <asp:HyperLink ID="HyperLink4" runat="server" Target="_blank" NavigateUrl="~/view_coordinator.aspx">View Alloted Coordinators</asp:HyperLink>
+       <br />
+       <br />
+       </div>
+
+       
+   <div class="Warden" style="float:left; margin-left:15%;  width:15%;">
+       <h2>Wardens</h2>
+       <br />
+       <asp:HyperLink ID="HyperLink5" runat="server" Target="_blank" NavigateUrl="~/Admin/Registrations/Faculity_reg.aspx">Register Wardens</asp:HyperLink>
+       <br />
+       <br />
+       <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/View Data/Wardens/Reg_Wardens.aspx"> Registered Wardens</asp:HyperLink>
+       <br />
+       <br />
+    
+       <asp:HyperLink ID="HyperLink8" runat="server" Target="_blank" NavigateUrl="~/view wardens.aspx">View Alloted Wardens</asp:HyperLink>
+       <br />
+       <br />
+       </div>
+
+        <div class="Students" style="float:left; margin-left:15%;  width:19%;">
+            <h2>Students</h2>
+            <br />
+            <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Admin/View Data/Students/Reg_students.aspx">View Registred Students</asp:HyperLink>
+            <br />
+<br />            
+            <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Admin/View Data/Students/Stud_requests.aspx">View Student Requests</asp:HyperLink>
+           
+            </div>
+            </div>
+    </div>
+    
+        <form id="form1" runat="server">
+         
+
+          
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+       
+        </asp:ContentPlaceHolder>
+      </form>
+</body>
+</html>
