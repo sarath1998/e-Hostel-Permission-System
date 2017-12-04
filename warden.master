@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="warden.master.cs" Inherits="warden" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>WARDEN MASTER PAGE</title>
+     <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+  <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+             <div class="navbar-header">
+                 <asp:Label ID="Label2" runat="server"  Text="Hostel Permission System" CssClass="navbar-text" Font-Size="Medium"></asp:Label>                 
+             </div>
+
+             <ul class="nav navbar-nav">
+        <li><a href="../warden/Warden_LoggedIn.aspx" >Home</a></li>
+        <li><a href="../warden/RequestsPage.aspx">Requests </a></li>
+      
+
+                 </ul>
+
+
+             <ul class="nav  navbar-nav navbar-right">
+                <li><a runat="server">
+                    <asp:Label ID="user" runat="server" Text=""></asp:Label> </a></li>
+                 <li><a href="../warden/warden_profile.aspx"> Profile</a>
+                 <li><a href="../students/logout.aspx">Logout</a></li>
+                 </ul>             
+         </div>
+     </nav>    
+
+    
+        
+
+
+
+
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+    </form>
+</body>
+</html>
